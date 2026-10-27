@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10243a">
+<meta name="description" content="Prototipe UTVI-Journey — ekosistem inovasi dan continuous improvement.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<title>UTVI-Journey | Innovation Hub</title>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-mark">UT</div><div><b>UTVI-Journey</b><small>Innovation Hub</small></div></div>
+    <div class="profile-mini"><div class="avatar">SM</div><div><b>Samuel M.</b><small>Demo Innovator · TD Corpu</small></div></div>
+    <nav>
+      <button class="nav active" data-view="dashboard">▦ <span>Dashboard</span></button>
+      <button class="nav" data-view="discover">⌕ <span>Lean / Waste</span></button>
+      <button class="nav" data-view="myinnovation">↗ <span>My Innovation</span></button>
+      <button class="nav" data-view="leaderboard">♜ <span>Leaderboard</span></button>
+      <button class="nav" data-view="committee">✓ <span>Komite / IC</span></button>
+    </nav>
+    <div class="sidebar-foot"><span class="live-dot"></span> Prototype mode <small>Data tersimpan di perangkat ini</small></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div><p class="eyebrow">CONTINUOUS IMPROVEMENT ECOSYSTEM</p><h1 id="pageTitle">Dashboard</h1></div><div class="top-actions"><span class="pill">● Demo</span><button class="btn btn-light" id="exportBtn">↓ Ekspor CSV</button></div></header>
+    <section id="appView"></section>
+    <footer>UTVI-Journey · Prototipe awal untuk validasi alur kerja. Bukan sistem resmi UT.</footer>
+  </main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<dialog id="ideaDialog">
+  <form id="ideaForm" method="dialog" class="dialog-form">
+    <div class="dialog-head"><div><p class="eyebrow">KONTRIBUSI BARU</p><h2>Laporkan Lean / Waste</h2></div><button type="button" class="icon-btn" id="closeDialog">×</button></div>
+    <label>Judul temuan<input name="title" required maxlength="100" placeholder="Contoh: Waktu tunggu inspeksi unit"></label>
+    <div class="form-grid">
+      <label>Kategori<select name="category" required><option value="Operational">Operational</option><option value="People & Culture">People & Culture</option><option value="Technic">Technic</option><option value="Business Model">Business Model</option><option value="People & Process">People & Process</option><option value="Operational Excellent">Operational Excellent</option></select></label>
+      <label>Cabang / Site<input name="site" required placeholder="Contoh: Jakarta / Site A"></label>
+    </div>
+    <label>Area kerja<input name="area" placeholder="Departemen, workshop, site, dll."></label>
+    <label>Deskripsi masalah<textarea name="description" required rows="3" placeholder="Apa yang terjadi? Apa waste atau potensi perbaikannya?"></textarea></label>
+    <label>Potensi dampak<select name="impact"><option>Waktu</option><option>Biaya</option><option>Kualitas</option><option>Keselamatan</option><option>Produktivitas</option><option>People & Culture</option></select></label>
+    <div class="form-actions"><button type="button" class="btn btn-light" id="cancelDialog">Batal</button><button class="btn btn-primary" type="submit">Simpan temuan · +10 XP</button></div>
+  </form>
+</dialog>
+<script src="app.js"></script>
+</body>
+</html>

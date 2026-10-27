@@ -1,0 +1,17 @@
+{
+  "name": "UTVI-Journey Innovation Hub",
+  "short_name": "UTVI-Journey",
+  "description": "Prototipe ekosistem gamifikasi continuous improvement.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f3f6fa",
+  "theme_color": "#10243a",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
